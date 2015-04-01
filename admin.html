@@ -1,0 +1,9 @@
+<div class="container-fluid">
+    <p>{{infor.name}}</p>
+    <form name="myForm">
+        <label>Name</label>
+        <input type="text" name="name" ng-model="name" required>
+        <button ng-click="save()" ng-disabled="myForm.$invalid" class="btn btn-primary">Save</button>
+        <p>Bonjour {{name}}</p>
+    </form>
+</div>

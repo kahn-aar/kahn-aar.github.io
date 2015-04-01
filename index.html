@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr" ng-app="project">
+    <head>
+        <meta charset="utf-8">
+        <title>Nicolas Martin</title>
+        <link rel="stylesheet" href="./CSS/bootstrap.css">
+        <link rel="stylesheet" href="./CSS/myCss.css">
+        <script src="./js/jquery.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-resource.min.js">
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js">
+        </script>
+        <!-- Firebase -->
+        <script src="https://cdn.firebase.com/js/client/2.2.2/firebase.js"></script>
+        <!-- AngularFire -->
+        <script src="https://cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"></script>
+        <script src="./js/controllers.js"></script>
+
+    </head>
+    <body ng-controller="PhoneListCtrl">
+        <header>
+            <div class="image">
+                <img src="./ressources/logo_utc.png" alt="utc">
+            </div>
+            <div class="nom">
+                <p>{{infos.nom}}</p>
+            </div>
+        </header>   
+        <div class="container-fluid">
+            <nav class="col-md-3">
+                <div class="nav">
+                    <div class="descriptionBtn active" ng-click="displayContent()">Description</div>
+                    <div class="uvBtn" ng-click="displayUv()">Uvs</div>
+                    <div class="xpBtn" ng-click="displayXp()">Expériences Professionelles</div>
+                    <div class="otherXpBtn" ng-click="displayOtherXp()">Autres expériences</div>
+                    <div class="skillBtn" ng-click="displaySkills()">Compétences</div>
+                    <div class="projectBtn" ng-click="displayProjets()">Projets</div>
+                    <div class="projectBtn" ng-click="displayAdmin()"><a href="#/admin">Admin</a></div>
+                </div>
+                <div class="contact">
+                    <p>Me contacter : <a href="mailto:{{infos.mail}}">{{infos.mail}}</a></p>
+                    <p>Linkedin : <a href="{{infos.linkedin}}">Linkedin</a></p>
+                    <p><a href="ressources/{{infos.titreCv}}.pdf">télécharger mon CV (PDF)</a></p>
+                </div>
+            </nav>
+            <div ng-view></div>
+            
+        </div>
+        
+    </body>
+</html>

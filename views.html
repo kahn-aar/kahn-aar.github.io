@@ -1,0 +1,127 @@
+<article class="col-md-9 cont">
+    <div class="titre">
+        <h2>{{contenu.titre}}</h2>
+    </div>
+    <p>{{contenu.introduction}}</p>
+</article>
+<article class="col-md-9 uv">
+    <div class="titre">
+        <h2>Liste des uvs suivies lors de mon cursus</h2>
+    </div>
+    <div class="filtre">
+        choisir le domaine :
+        <select ng-model="query">
+            <option value="">toutes</option>
+            <option ng-repeat="type in listeType" value="{{type.types}}">{{type.types}}</option>
+        </select>
+    </div>
+    <div ng-repeat="uv in listuv | filter:query">
+        <div class="panel panel-default link">
+            <div class="panel-heading ">
+                <h3 class="panel-title"><a href="#">{{uv.id}}</a>&nbsp;{{uv.name}}</h3>
+            </div>
+            <div class="panel-body content">
+                {{uv.description}}
+            </div>
+        </div>
+    </div>
+    
+</article>
+<article class="col-md-9 xp">
+    <div class="titre">
+        <h2>Liste des expériences professionnelles</h2>
+    </div>
+    <div ng-repeat="exp in xp">
+        <div class="panel panel-default link">
+            <div class="panel-heading ">
+                <h3 class="panel-title">{{exp.entreprise}}</h3>
+            </div>
+            <div class="panel-body content">
+                <p>date : {{exp.date}}</p>
+                <p>{{exp.description}}</p>
+            </div>
+        </div>
+    </div>
+    
+</article>
+<article class="col-md-9 other-xp">
+    <div class="titre">
+        <h2>Liste des expériences associatives et sportives</h2>
+    </div>
+    <div ng-repeat="exp in otherXp">
+        <div class="panel panel-default link">
+            <div class="panel-heading ">
+                <h3 class="panel-title">{{exp.nom}}</h3>
+            </div>
+            <div class="panel-body content">
+                <p>date : {{exp.date}}</p>
+                <p>{{exp.description}}</p>
+            </div>
+        </div>
+    </div>
+    
+</article>
+<article class="col-md-9 skills">
+    <div class="titre">
+        <h2>Compétences</h2>
+    </div>
+    <div ng-repeat="skill in skills">
+        <div class="col-md-4">
+            <div class="panel panel-default link">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{skill.titre}}</h3>
+                </div>
+                <div class="panel-body ">
+                    <ul>
+                        <li ng-repeat="skillEx in skill.values">{{skillEx.nom}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</article>
+<article class="col-md-9 projets">
+    <div class="titre">
+        <h2>Liste des projets</h2>
+    </div>
+    <div ng-repeat="proj in projets">
+        <div class="panel panel-default link">
+            <div class="panel-heading ">
+                <h3 class="panel-title">{{proj.nom}}</h3>
+            </div>
+            <div class="panel-body content">
+                <div class="col-md-6">
+                    <p>langages : {{proj.langages}}</p>
+                    <p>outils utilisés : {{proj.outils}}</p>
+                    <!--<p><a href="{{proj.gitHub}}">github</a></p>-->
+                    <p><h4>description :</h4> {{proj.description}}</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="ressources/{{proj.image}}">
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<script type="text/javascript">
+
+    $(".content").hide();
+    displayContent();
+
+    $( document ).ready(function() {
+        setTimeout(function () {
+            $(".link").on("click", function() 
+            {
+                if($(this).find(".content").css("display") == "none") {
+                    $(".link").find(".content").hide("slow");
+                    $(this).find(".content").show("slow");
+                }
+                else{
+                    $(this).find(".content").hide("slow");
+                }
+
+            })}, 450);
+    });
+</script>

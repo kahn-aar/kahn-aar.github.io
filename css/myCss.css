@@ -1,0 +1,82 @@
+header
+{
+	height: 100px;
+	background-image:-webkit-linear-gradient(white, blue);
+	background-image:-moz-linear-gradient(white, blue);
+	background-image:-ms-overflow-style-gradient(white, blue);
+	margin-bottom: 20px;
+	line-height: 100px;
+	vertical-align: middle;
+}
+
+.nav div
+{
+	height: 50px;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+	line-height: 50px;
+	vertical-align: middle;
+	list-style-type: none;
+	padding-left: 20px;
+}
+
+.nav div:hover
+{
+	height: 60px;
+	opacity: 0.5;
+}
+
+.nav .active
+{
+	height: 60px;
+	background-image:-webkit-linear-gradient(white, grey);
+	background-image:-moz-linear-gradient(white, grey);
+	background-image:-ms-overflow-style-gradient(white, grey);
+	opacity: 0.5;
+}
+
+.image, .nom
+{
+	display: inline-block;
+}
+
+.image 
+{
+	height: 75px;
+	width: 200px;
+}
+
+header img 
+{
+	height: 75px;
+	width: 200px;
+}
+
+.contact
+{
+	margin-top: 20px;
+}
+
+.projets img 
+{
+	height: 200px;
+	width: 400px;
+}
+
+article .titre
+{
+	text-align: center;
+	border-bottom: 2px solid black;
+	margin-bottom: 20px;
+}
+
+.filtre
+{
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+p 
+{
+	text-align: justify;
+}
