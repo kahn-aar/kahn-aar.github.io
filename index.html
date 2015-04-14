@@ -4,9 +4,7 @@
         <meta charset="utf-8">
         <title>Nicolas Martin</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-
         <link rel="stylesheet" href="css/myCss.css">
-        <link rel="stylesheet" href="./CSS/myCss.css">
         <script src="./js/jquery.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-resource.min.js">
@@ -17,10 +15,14 @@
         <script src="https://cdn.firebase.com/js/client/2.2.2/firebase.js"></script>
         <!-- AngularFire -->
         <script src="https://cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"></script>
-        <script src="./js/controllers.js"></script>
-
+        <script src="js/app.js"></script>
+        <script src="js/controllers/controllers.js"></script>
+        <script src="js/directives/directives.js"></script>
+        <script src="js/services/service.js"></script>
     </head>
-    <body ng-controller="PhoneListCtrl">
+
+
+    <body ng-controller="ViewCtrl">
         <header>
             <div class="image">
                 <img src="./ressources/logo_utc.png" alt="utc">
@@ -38,7 +40,7 @@
                     <div class="otherXpBtn" ng-click="displayOtherXp()">Autres expériences</div>
                     <div class="skillBtn" ng-click="displaySkills()">Compétences</div>
                     <div class="projectBtn" ng-click="displayProjets()">Projets</div>
-                    <div class="projectBtn" ng-click="displayAdmin()"><a href="#/admin">Admin</a></div>
+                    <div class="adminBtn" ng-hide="true" ng-click="displayAdmin()">Admin</div>
                 </div>
                 <div class="contact">
                     <p>Me contacter : <a href="mailto:{{infos.mail}}">{{infos.mail}}</a></p>

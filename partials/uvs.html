@@ -6,7 +6,7 @@
         choisir le domaine :
         <select ng-model="query">
             <option value="">toutes</option>
-            <option ng-repeat="type in listeType" value="{{type.types}}">{{type.types}}</option>
+            <option ng-repeat="type in domain" value="{{type.types}}">{{type.types}}</option>
         </select>
     </div>
     <div ng-repeat="uv in listuv | filter:query">

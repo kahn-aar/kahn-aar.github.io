@@ -24,6 +24,7 @@ header
 {
 	height: 60px;
 	opacity: 0.5;
+	cursor: pointer;
 }
 
 .nav .active
@@ -79,4 +80,9 @@ article .titre
 p 
 {
 	text-align: justify;
+}
+
+.panel-heading
+{
+	cursor: pointer;
 }

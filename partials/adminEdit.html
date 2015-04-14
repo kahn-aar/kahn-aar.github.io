@@ -1,0 +1,7 @@
+<div class="container-fluid">
+    <form novalidate name="myForm">
+        <div class="element" ng-repeat="elmt in elements" >
+            <input required ng-model="newElement.{{elmt.label}}" name="{{elmt.label}}" type="text" />
+        </div>
+    </form>
+</div>

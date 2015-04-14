@@ -1,0 +1,11 @@
+<div class="container-fluid">
+    {{elements.fileds}}
+    <form novalidate name="myForm" class="form-horizontal">
+        <div class="control-group error" ng-repeat="elmt in elements.fileds" >
+            <label class="control-label">{{elmt.label}} : </label><input required bind-model="elmt.label" name="{{elmt.type}}" type="text" />
+        </div>
+
+        <button class="btn btn-success" ng-click="addElement(element)" ng-disabled="myForm.$invalid">Ajouter</button>
+        {{element}}
+    </form>
+</div>

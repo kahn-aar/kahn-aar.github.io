@@ -1,13 +1,10 @@
-Site CV Angular
+Site CV Personnel
 ############################
 
 *Ecrit par Nicolas Martin*
 
 Technologies
 -----------------------------
-HTML, CSS, JS, Angular
+HTML, CSS, JS, AngularJS, Firebase
 
-Modifications
-------------------------------
-Il suffit de modifier les fichiers json afin de rentrer vos données
 
